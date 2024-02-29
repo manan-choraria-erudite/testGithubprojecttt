@@ -1,0 +1,60 @@
+<template>
+
+<lightning-card>
+<h2 class="header2">Enter Credentials To Connect Your Org With EW Sign</h2>
+			<br />
+			<br />
+			<!-- Grid 1 -->
+			<div class="slds-grid" style="width: 378px;margin-left: 20px;">
+
+				<div class="slds-size_2-of-12">
+					<span> <lightning-icon style="margin-left:10px;" icon-name="utility:user" alternative-text="Connect" class="connectIcon user" size="small"></lightning-icon></span>
+				</div>
+				<div class="slds-size_6-of-12">
+					<span style="font-size:16px;">Username : </span>
+				</div>
+				<div class="slds-size_6-of-12">
+					<span><lightning-input style="margin-left:-42px;" onchange={handleChange} value={userName} type="text" variant="label-hidden" name="userName" placeholder={userNamePlaceholder} required></lightning-input></span>
+				</div>
+
+			</div>
+			<br />
+
+			<!-- Grid 2 -->
+			<div class="slds-grid" style="width: 378px;margin-left: 20px;">
+
+				<div class="slds-size_2-of-12">
+					<span> <lightning-icon style="margin-left:10px;" icon-name="utility:lock" alternative-text="Connect" class="connectIcon password" size="small"></lightning-icon></span>
+				</div>
+				<div class="slds-size_6-of-12">
+					<span style="font-size:16px;">Password : </span>
+				</div>
+				<div class="slds-size_6-of-12">
+					<span><lightning-input style="margin-left:-42px;" onchange={handleChange} value={passWord} type="password" variant="label-hidden" name="password" placeholder={passwordPlaceholder} required></lightning-input>
+</span>
+				</div>
+
+			</div>
+
+			<br />
+
+			<!-- Grid 3 -->
+			<div class="slds-grid" style="width: 378px;margin-left: 20px;">
+
+				<div class="slds-size_2-of-12">
+					<span><lightning-icon style="margin-left:10px;" icon-name="utility:locker_service_console" alternative-text="Connect" class="connectIcon token" size="small"></lightning-icon></span>
+				</div>
+				<div class="slds-size_6-of-12">
+					<span style="font-size:16px;">Security Token : </span>
+				</div>
+				<div class="slds-size_6-of-12">
+					<span><lightning-input style="margin-left:-42px;" onchange={handleChange} value={securityToken} type="password" variant="label-hidden" name="securityToken"  placeholder={securityTokenPlaceholder} required></lightning-input></span>
+				</div>
+
+			</div>
+
+
+</lightning-card>
+
+
+</template>

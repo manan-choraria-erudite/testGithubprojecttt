@@ -1,0 +1,91 @@
+<template>
+	<lightning-card>
+
+<!-- Used in EWSign -->
+ <div id="buttonGroup1" class="slds-abolute_align-center"
+                                            style="background-color:#4e85b1; text-align:center; height:55px; border-radius:32px; margin:10px auto auto auto; width:72%;">
+
+
+                                            <div class="slds-abolute_align-center slds-grid slds-gutters"
+                                                style="margin:auto; padding-top:2px;">
+
+                                                <div class="slds-col" style="margin-top: 5px;">
+                                                    <!-- {completedTIDataLength} -->
+                                                    <span><button onclick={showCompleted}
+                                                            class="btn active">Completed<span class="badge"
+                                                                style="background-color: #cce4f6;border-radius: 10px;width: 13px;padding-inline: 8px;margin-left: 7px;">10</span></button></span>
+                                                </div>
+                                                <div class="slds-col" style="margin-top: 5px;">
+                                                    <!-- {pendingTIDataLength} -->
+                                                    <span><button onclick={showPending} class="btn">Pending <span
+                                                                class="badge"
+                                                                style="background-color: #cce4f6;border-radius: 10px;width: 13px;padding-inline: 8px;margin-left: 7px;">12</span></button></span>
+                                                </div>
+                                                <div class="slds-col" style="margin-top: 5px;">
+                                                    <!-- {expiringSoonTIDataLength} -->
+                                                    <span><button onclick={showExpiring} class="btn">Expiring Soon <span
+                                                                class="badge"
+                                                                style="background-color: #cce4f6;border-radius: 10px;width: 13px;padding-inline: 8px;margin-left: 2px;">5</span></button></span>
+                                                </div>
+                                                <div class="slds-col" style="margin-top: 5px;">
+                                                    <!-- {rejectedTIDataLength} -->
+                                                    <span><button onclick={showRejected} class="btn">Rejected <span
+                                                                class="badge"
+                                                                style="background-color: #cce4f6;border-radius: 10px;width: 13px;padding-inline: 8px;margin-left: 7px;">3</span></button></span>
+                                                </div>
+
+                                            </div>
+
+
+                                        </div>
+
+<!-- Used in EWSign -->
+
+        <!-- second -->
+<!-- <hr style="margin-bottom: -29px;">
+		<div class="slds-abolute_align-center" style="background-color:rgb(230 240 255); text-align:center; height:50px; border-radius:32px; margin:auto; width:57%;">
+
+
+			<div class="slds-abolute_align-center slds-grid slds-gutters" style="margin:auto;">
+           				<div class="slds-col" style="margin-top: 5px;">
+					<span><button onclick={completedfun} class="completed">Completed<span class="badge" style="background-color: #cce4f6;border-radius: 10px;width: 13px;padding-inline: 8px;margin-left: 7px;">22</span></button></span>
+				</div>
+				<div class="slds-col" style="margin-top: 5px;">
+					<span><button onclick={pendingfun}>Pending <span class="badge" style="background-color: #cce4f6;border-radius: 10px;width: 13px;padding-inline: 8px;margin-left: 7px;">10</span></button></span>
+				</div>
+				<div class="slds-col" style="margin-top: 5px;">
+					<span><button onclick={expiringfun}>Expiring Soon <span class="badge" style="background-color: #cce4f6;border-radius: 10px;width: 13px;padding-inline: 8px;margin-left: 2px;">11</span></button></span>
+				</div>
+				<div class="slds-col" style="margin-top: 5px;">
+					<span><button onclick={rejectedfun}>Rejected <span class="badge" style="background-color: #cce4f6;border-radius: 10px;width: 13px;padding-inline: 8px;margin-left: 7px;">14</span></button></span>
+				</div>
+                
+        
+			</div>
+
+
+		</div>
+<template if:true={completed}>
+        <lightning-card>
+            <h1 style="font-weight:800; text-align:center;">COMPLETED CALLED</h1>
+        </lightning-card>
+</template>
+<template if:true={pending}>
+
+        <lightning-card>
+            <h1 style="font-weight:800; text-align:center;">PENDING CALLED</h1>
+        </lightning-card>
+</template>
+<template if:true={expiring}>
+        <lightning-card>
+            <h1 style="font-weight:800; text-align:center;">EXPIRING SOON CALLED</h1>
+        </lightning-card>
+</template>     
+<template if:true={rejected}>
+        <lightning-card>
+            <h1 style="font-weight:800; text-align:center;">REJECTED CALLED</h1>
+        </lightning-card>
+</template> -->
+
+	</lightning-card>
+</template>

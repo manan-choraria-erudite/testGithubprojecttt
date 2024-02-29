@@ -1,0 +1,14 @@
+.tableCss table>thead .slds-th__action{
+	
+text-decoration: line-through;
+background-color: #f1a43a;
+white-space: normal !important;
+  
+} 
+
+
+.slds-truncate
+{
+white-space: normal !important;
+max-width:85%;
+}

@@ -1,0 +1,24 @@
+<template>
+	<!-- <div class="tooltip slds-button slds-button_icon slds-button slds-button_icon">
+		<span class="mytooltip tooltip-effect-1">
+                                        <span class="tooltip-item">
+                                            <lightning-button label="Help" title="Help" onclick={handleClickHelp}
+                                                class="slds-m-left_x-small"></lightning-button>                                        </span>
+		<template lwc:if={showHelpText}>
+			<div class="tooltip-content clearfix">
+				<div style="height: 300px; overflow: auto;">
+					<lightning-formatted-rich-text value={htmlHelpText}></lightning-formatted-rich-text>
+				</div>
+			</div>
+		</template>
+		</span>
+	</div> -->
+
+
+
+	<!-- <lightning-combobox field-level-help="Select the status from here." name="progress" value={value} placeholder="Select Progress" options={options}
+		onchange={handleChange} variant="label-hidden"></lightning-combobox> -->
+                <lightning-combobox  name="progress" value={value} placeholder="Select Progress" options={options}
+		onchange={handleChange} variant="label-hidden"></lightning-combobox>
+
+</template>

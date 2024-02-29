@@ -1,0 +1,67 @@
+<template>
+	<div class="slds-form-element" style="width: 96%; margin: 0px 5px;">
+		<label class="slds-form-element__label" for="combobox-id-5" id="combobox-label-id-32">{customLabel}</label>
+		<div class="slds-form-element__control">
+			<div class="slds-combobox_container">
+				<div class={txtclassname} data-id="resultBox" aria-expanded="false" aria-haspopup="listbox"
+					role="combobox">
+					<div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left-right"
+						role="none">
+                        
+						<span class="slds-icon_container slds-icon-standard-account slds-combobox__input-entity-icon" title="Account">
+<lightning-icon class="slds-icon slds-icon_small" icon-name={iconName} alternative-text="icon" ></lightning-icon>
+<span class="slds-assistive-text">Contact</span>
+						</span>
+                        <input if:true={typeInput} type="text" class={focusClass} id="combobox-id-3" aria-activedescendant="option1" aria-autocomplete="list" aria-controls="listbox-id-3" aria-expanded="true" aria-haspopup="listbox"
+            role="combobox" placeholder="Search..." onchange={searchField} oninput={searchField} onfocus={searchField} onblur={handleBlur}/>
+						<div if:false={typeInput} role="combobox" tabindex="0"
+							class="slds-input_faux slds-combobox__input slds-combobox__input-value"
+							aria-labelledby="combobox-label-id-32 combobox-id-5-selected-value"
+							id="combobox-id-5-selected-value" aria-controls="listbox-id-5" aria-expanded="false"
+							aria-haspopup="listbox">
+							<span class="slds-truncate" id="combobox-value-id-19">{selectRecordName}</span>
+						</div>
+						<div if:true={iconFlag}>
+                                    <span class="slds-icon_container slds-icon-utility-search slds-input__icon slds-input__icon_right iconheight">
+                                        <lightning-icon class="slds-icon slds-icon slds-icon_small slds-icon-text-default" icon-name="utility:search" size="x-small" alternative-text="icon" style="top:43%"></lightning-icon>
+                                    </span> 
+                                </div>
+                                <div if:true={clearIconFlag}>
+                                    <button class="slds-input__icon slds-input__icon_right slds-button slds-button_icon iconheight" onclick={resetData}>
+                                        <lightning-icon class="slds-icon slds-icon slds-icon_small slds-icon-text-default cancelIcon" icon-name="utility:clear" size="x-small" alternative-text="icon"  style="bottom: -52%;position: absolute;"></lightning-icon>
+                                        <span class="slds-assistive-text">Clear</span></button>
+                                </div>
+					</div>
+					<div if:true={isSelectionCombo} id="listbox-id-5" class="slds-dropdown slds-dropdown_length-with-icon-7 slds-dropdown_fluid"
+						role="listbox" aria-label="Placeholder for Dropdown Items" tabindex="0" aria-busy="false">
+						<ul class="slds-listbox slds-listbox_vertical" role="presentation">
+							<template for:each={searchRecords} for:item="serecord">
+								<li role="presentation" class="slds-listbox__item" key={serecord.recId}>
+									<div data-id={serecord.recId} data-name={serecord.recName}
+										onclick={setSelectedRecord}
+										class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+										role="option">
+										<!-- <span class="slds-icon_container slds-icon-standard-account slds-combobox__input-entity-icon" title="Account">
+<lightning-icon class="slds-icon slds-icon_small" icon-name={iconName} alternative-text="icon" ></lightning-icon>
+<span class="slds-assistive-text">Contact</span>
+										</span> -->
+										<span class="slds-media__body">
+<span class="slds-listbox__option-text slds-listbox__option-text_entity">{serecord.recName}</span>
+										<span class="slds-listbox__option-meta slds-listbox__option-meta_entity">{objectName} • {serecord.recName}</span>
+										</span>
+									</div>
+								</li>
+							</template>
+						</ul>
+					</div>
+                    <div if:true={messageFlag}>
+                                No result found.
+                            </div>
+                            <div if:true={LoadingText}>
+                                Loading...
+                            </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>

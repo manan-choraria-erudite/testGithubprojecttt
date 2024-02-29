@@ -1,0 +1,75 @@
+<template>
+    <lightning-card  title="Contact Card">
+            <lightning-button label="New" slot="actions"></lightning-button>
+
+            
+            <!-- <div class="slds-grid slds-gutters">
+                <div class="slds-col slds-size_4-of-12">
+                        <div>
+                            <lightning-icon  icon-name="utility:clock" alternative-text="Clock" size="x-small"></lightning-icon>
+                            <label  style="color: #90404A; font-weight: 900;">Local Time</label><br>
+                        </div>
+
+                        <div>
+                            <lightning-icon  icon-name="utility:dialing" alternative-text="dialing" size="x-small"></lightning-icon>
+                            <label style="color: #90404A; font-weight: 900;">Mobile</label><br>
+                        </div>
+
+                        <div>
+                            <lightning-icon  icon-name="utility:email" alternative-text="email" size="x-small"></lightning-icon>
+                            <label style="color: #90404A; font-weight: 900;">Home</label><br>
+                        </div>
+
+                        <div>
+                            <lightning-icon  icon-name="utility:email" alternative-text="email" size="x-small"></lightning-icon>
+                            <label style="color: #90404A; font-weight: 600;">Company Email</label><br>
+                        </div>
+
+                        <div>
+                            <lightning-icon  icon-name="utility:email" alternative-text="email" size="x-small"></lightning-icon>
+                            <label style="color: #90404A; font-weight: 600;">Work Email</label><br>
+                        </div>
+
+                        <div>
+                            <lightning-icon  icon-name="utility:checkin" alternative-text="checkin" size="x-small"></lightning-icon>
+                            <label style="color: #90404A; font-weight: 900;">Home</label>
+                        </div>
+                </div>
+                <div class="slds-col slds-size_7-of-12">
+                        <lightning-formatted-time value={cardLocalTime}></lightning-formatted-time><br>
+                        <lightning-formatted-phone value={cardMobile}></lightning-formatted-phone><br>
+                        <lightning-formatted-email value={cardHomeEmail} hide-icon></lightning-formatted-email><br>
+                        <lightning-formatted-email value={cardCompanyEmail} hide-icon></lightning-formatted-email><br>
+                        <lightning-formatted-email value={cardWorkEmail} hide-icon></lightning-formatted-email><br>
+                        <lightning-formatted-text value={cardHomeAddress} ></lightning-formatted-text>
+                </div>
+               
+            </div> -->
+
+
+
+
+            <table style="margin-left:10px;">
+                <tr>
+                    <td style="width:24px;"><lightning-icon  icon-name="utility:clock" alternative-text="Clock" size="x-small"></lightning-icon></td>
+                    <td style="margin-left : -20px; text-align: left;"><label  style="color: #90404A; font-weight: 900;">Local Time</label><br></td>
+                    <td><lightning-formatted-time value="02:18 AM"></lightning-formatted-time></td>
+                </tr>
+                <tr style="height:20px;"></tr>
+                <tr>
+                   <td  style="width:24px;"><lightning-icon  icon-name="utility:call" alternative-text="Clock" size="x-small"></lightning-icon></td>
+                    <td style="margin-left : -20px;"><label  style="color: #90404A; font-weight: 900;">Mobile</label><br></td>
+                    <td><lightning-formatted-time value="(124)234-2467"></lightning-formatted-time></td>
+                </tr>
+                 <tr style="height:20px;"></tr>
+                <tr>
+                   <td  style="width:24px;"><lightning-icon  icon-name="utility:at" alternative-text="Clock" size="x-small"></lightning-icon></td>
+                    <td style="margin-left : -20px;"><label  style="color: #90404A; font-weight: 900;">Home</label><br></td>
+                    <td style="width:400px;"><lightning-formatted-time value="aph. A paragraph is defined as “a group of sentences"></lightning-formatted-time></td>
+                </tr>
+            </table>
+            
+            
+    </lightning-card>
+     
+</template>

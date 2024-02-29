@@ -1,0 +1,40 @@
+<template>
+    <lightning-card>
+        <template if:true={accList}>
+            <div class="slds-col">
+                <div class="slds-list_inline slds-p-bottom_xx-small">
+                    <label class="slds-text-color_weak slds-p-horizontal_x-small" for="recordsPerPage" style="font-weight:700;">Show </label>
+                    <div class="slds-select_container" style="margin-top:-4px;">
+                        <select class="slds-select" id="recordsPerPage" onchange={handleRecordsPerPage} value={pageSize} style="width:56px;">
+                            <template for:each={pageSizeOptions} for:item="option">
+                                <option key={option} value={option}>{option}</option>
+                            </template>
+                        </select>
+                    </div>
+                    <label class="slds-text-color_weak slds-p-horizontal_x-small" for="recordsPerPage" style="font-weight:700;"> entries</label>
+                </div>
+            </div>
+            <lightning-datatable key-field="id" data={accListTemp} columns={columns}>
+            </lightning-datatable>
+            <div class="slds-align_absolute-center">
+                <div class="slds-grid slds-gutters" style="margin-top: 14px;">
+                    <div class="slds-col slds-text-align_left">
+                        <span>
+                            <lightning-button label="Previous" icon-name="utility:chevronleft" onclick={previousHandler} disabled={isPreviousDisable}></lightning-button>
+                        </span>
+                    </div>
+                    <div class="slds-col">
+                        <span class="slds-badge slds-badge_lightest" style="margin-right: 10px;margin-left: 10px; padding-top: 6px; padding-bottom: 6px; padding-left: 12px; padding-right: 12px; box-shadow: 1px 2px 3px -1px gray;">
+                            Displaying {startingRecord} to {endingRecord} of {accList.length} records &nbsp; | &nbsp; Page {page} of {totalPage}
+                        </span>
+                    </div>
+                    <div class="slds-col slds-text-align_right">
+                        <span>
+                            <lightning-button label="Next" icon-name="utility:chevronright" icon-position="right" onclick={nextHandler} disabled={isNextDisable}></lightning-button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </lightning-card>
+</template>

@@ -1,0 +1,12 @@
+.center{
+	 display: flex;
+    justify-content: center;
+}
+.center2{
+	 display: flex;
+    /* justify-content: center; */
+}
+.center3{
+	 display: flex;
+     justify-content: center; 
+}

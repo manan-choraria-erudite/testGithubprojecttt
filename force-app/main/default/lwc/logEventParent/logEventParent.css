@@ -1,0 +1,8 @@
+.dummy{
+	color : black;
+}
+.logButton{
+	margin: 0px 12px;
+    width: 93%;
+    display: grid;
+}

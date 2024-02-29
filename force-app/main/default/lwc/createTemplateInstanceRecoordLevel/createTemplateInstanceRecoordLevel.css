@@ -1,0 +1,23 @@
+.slds-card__footer {
+    /* margin: 0px; */
+    /* padding: 0px !important; */
+    padding-top: 0px !important;
+    padding-left: 0px !important;
+    padding-bottom: 0px !important;
+    padding-right: 0px !important;
+    margin-top: 0px !important;
+}
+
+.custom-modal-header {
+    border: 0px;
+}
+
+.card-body-no-padding {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+.slds-card__body {
+    margin-bottom: 0px !important;
+}

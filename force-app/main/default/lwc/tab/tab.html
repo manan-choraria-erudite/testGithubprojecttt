@@ -1,0 +1,179 @@
+<template>
+	<lightning-card>
+		<lightning-tabset>
+
+			<lightning-tab label=" New Template" class="slds--m-left-xx-large">
+				<div style=" margin:20px; margin-bottom:15px;">
+
+					<lightning-icon variant="brand" class="blue-utility-icon" icon-name="utility:upload"
+						alternative-text="Doc image"
+						style="margin-bottom: -9px; display: flex; justify-content: center;"></lightning-icon>
+					<br>
+
+					<div class="slds-align_absolute-center">
+						<!-- <c-create-new-template onerroroccured={onErrorOfNewTemplate}
+									oneditorclose={closeCreateNewTemplateModal}></c-create-new-template> -->
+					</div>
+
+					<br>
+					<h4
+						style="color:gray; display: flex; justify-content:center; align-items: center; margin-top:-12px;">
+						Create a new template</h4>
+				</div>
+			</lightning-tab>
+
+			<lightning-tab label="Existing Template" class="slds--m-left-xx-large">
+				<div class="slds-grid slds-wrap" style="padding: 0px 46px 12px 46px;">
+					<div class="slds-col slds-size_12-of-12">
+						<lightning-combobox name="Template" label="Select Template" value={selectedTemplateId}
+							placeholder="Select Template" options={templateOptions} onchange={handleChangeTemplate}>
+						</lightning-combobox>
+					</div>
+
+				</div>
+				<div class="slds-align_absolute-center" style="padding-bottom: 12px;">
+					<lightning-button label="Send Document" title="Send Document" onclick={handleClickCreateInstance}
+						class="slds-m-left_x-small">
+						<lightning-icon icon-name="utility:upload"></lightning-icon>
+					</lightning-button>
+				</div>
+
+			</lightning-tab>
+
+		</lightning-tabset>
+
+		<div class="slds-tabs_default">
+			<ul class="slds-tabs_default__nav" role="tablist">
+
+
+				<template lwc:if={isFirstTabActive}>
+					<div class="slds-grid slds-absolute_align-center slds-grid_align-center" style="width:100%;">
+
+
+
+						<div class="slds-col slds-grow-none"></div>
+						<div class="slds-col slds-size_4-of-12 slds-absolute_align-center">
+							<span>
+
+					   <li class="slds-tabs_default__item slds-is-active" title="Item One" role="presentation">
+					    <a class="slds-tabs_default__link" href="#" role="tab" tabindex="0"
+					        aria-selected={isFirstTabActive} aria-controls="tab-default-1" id="tab-default-1__item"
+					        onclick={handleTabClick} data-tab="1" style="text-align:center;">New Template</a>
+					    </li>
+					
+					         </span>
+						</div>
+						<div class="slds-col slds-size_1-of-12"></div>
+
+
+						<div class="slds-col slds-size_4-of-12 slds-absolute_align-center">
+							<span>
+
+					             <li class="slds-tabs_default__item" title="Item Two" role="presentation">
+					               <a class="slds-tabs_default__link" href="#" role="tab" tabindex="-1"
+					                  aria-selected={isSecondTabActive} aria-controls="tab-default-2" id="tab-default-2__item"
+					                  onclick={handleTabClick} data-tab="2" style="text-align:center;">Existing Template</a>
+					            </li>
+					
+					        </span>
+						</div>
+					</div>
+					<div class="slds-col  slds-grow-none"></div>
+
+
+
+
+
+
+				</template>
+
+
+				<template lwc:else>
+<div class="slds-grid slds-absolute_align-center slds-grid_align-center" style="width:100%;">
+
+
+
+						<div class="slds-col slds-grow-none"></div>
+						<div class="slds-col slds-size_4-of-12 slds-absolute_align-center">
+							<span>
+
+					   <li class="slds-tabs_default__item" title="Item One" role="presentation">
+					    <a class="slds-tabs_default__link" href="#" role="tab" tabindex="0"
+					        aria-selected={isFirstTabActive} aria-controls="tab-default-1" id="tab-default-1__item1"
+					        onclick={handleTabClick} data-tab="1" style="text-align:center;">New Template</a>
+					    </li>
+					
+					         </span>
+						</div>
+						<div class="slds-col slds-size_1-of-12"></div>
+
+
+						<div class="slds-col slds-size_4-of-12 slds-absolute_align-center">
+							<span>
+
+					             <li class="slds-tabs_default__item slds-is-active" title="Item Two" role="presentation">
+					               <a class="slds-tabs_default__link" href="#" role="tab" tabindex="-1"
+					                  aria-selected={isSecondTabActive} aria-controls="tab-default-2" id="tab-default-2__item1"
+					                  onclick={handleTabClick} data-tab="2"  style="text-align:center;">Existing Template</a>
+					            </li>
+					
+					        </span>
+						</div>
+					</div>
+					<div class="slds-col  slds-grow-none"></div>
+				</template>
+
+
+
+
+			</ul>
+
+			<div if:true={isFirstTabActive} id="tab-default-1"
+				class="firstTabContentClass slds-tabs_default__content slds-show" role="tabpanel"
+				aria-labelledby="tab-default-1__item">
+
+				<div style=" margin:20px; margin-bottom:15px;">
+
+					<lightning-icon variant="brand" class="blue-utility-icon" icon-name="utility:upload"
+						alternative-text="Doc image"
+						style="margin-bottom: -9px; display: flex; justify-content: center;"></lightning-icon>
+					<br>
+
+					<div class="slds-align_absolute-center">
+
+					</div>
+
+					<br>
+					<h4
+						style="color:gray; display: flex; justify-content:center; align-items: center; margin-top:-12px;">
+						Create a new template</h4>
+				</div>
+
+			</div>
+
+
+			<div if:true={isSecondTabActive} id="tab-default-2"
+				class="secondTabContentClass slds-tabs_default__content slds-show" role="tabpanel"
+				aria-labelledby="tab-default-2__item">
+				<div class="slds-grid slds-wrap" style="padding: 0px 46px 12px 46px;">
+					<div class="slds-col slds-size_12-of-12">
+						<lightning-combobox name="Template" label="Select Template" value={selectedTemplateId}
+							placeholder="Select Template" options={templateOptions} onchange={handleChangeTemplate}>
+						</lightning-combobox>
+					</div>
+
+				</div>
+				<div class="slds-align_absolute-center" style="padding-bottom: 12px;">
+					<lightning-button label="Send Document" title="Send Document" onclick={handleClickCreateInstance}
+						class="slds-m-left_x-small">
+						<lightning-icon icon-name="utility:upload"></lightning-icon>
+					</lightning-button>
+				</div>
+			</div>
+
+		</div>
+
+
+	</lightning-card>
+
+</template>

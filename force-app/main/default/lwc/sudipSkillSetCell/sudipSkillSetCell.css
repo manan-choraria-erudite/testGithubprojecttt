@@ -1,0 +1,19 @@
+.slds-modal__container{
+            max-width: 90rem !important;
+            width:84% !important;
+        }
+
+ .container {
+         position: relative;
+         display: inline-block;
+         cursor:pointer;
+        }
+        
+ .icon {
+            
+            display: none; /* Initially hide the icon */
+        }
+        
+        .container:hover .icon {
+            display: inline-block; /* Show the icon on hover */
+        }

@@ -1,0 +1,116 @@
+<template>
+
+	<template lwc:if={isEditMode}>
+		{selectedOptions} &nbsp;&nbsp;
+		<!-- <lightning-button icon-name="utility:edit" variant="brand" label="Edit Skills" title="Edit"
+			onclick={handleEditClick}>
+		</lightning-button> -->
+		<h1>Here is the edit button</h1>
+
+				<template lwc:if={selectedValues}>
+			<div class="container">
+					{selectedOptions} TEST &nbsp;&nbsp;
+					<template if:true={showEdit}>
+						<div class="icon">
+							<lightning-icon icon-name="utility:edit" onclick={handleEditClick} size="xx-small" class="slds-float_right"></lightning-icon>
+						</div>
+					</template>
+				</div>
+				</template>
+				<template lwc:else>
+					<template if:true={showEdit}>
+						<div class="icon">
+							<lightning-icon icon-name="utility:edit" onclick={handleEditClick} size="xx-small" class="slds-float_right"></lightning-icon>
+						</div>
+					</template>
+				</template>
+		
+
+
+	</template>
+
+		<template lwc:else>
+
+
+			<template lwc:if={showButton}>
+				<lightning-button icon-name="utility:add" variant="brand" label="Add Skills" title="addSkills"
+					onclick={handleAddSkills}>
+				</lightning-button>
+
+			</template>
+
+			<div class="container">
+				<template if:true={selectedValues}>
+					{selectedOptions} &nbsp;&nbsp;
+					<template if:true={showEdit}>
+						<div class="icon">
+							<lightning-icon icon-name="utility:edit" onclick={handleEditClick} size="xx-small"></lightning-icon>
+						</div>
+					</template>
+				</template>
+			</div>
+
+
+		</template>
+
+
+	<template lwc:if={isModalOpen}>
+
+
+		<section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+			aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+			<div class="slds-modal__container">
+				<!-- modal header start -->
+				<header class="slds-modal__header">
+					<!-- <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={hideSelectionModal}>
+                <lightning-icon icon-name="utility:close"
+                   alternative-text="close"
+                   variant="inverse"
+                   size="small" ></lightning-icon>
+                <span class="slds-assistive-text">Close</span>
+             </button> -->
+					<h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Select Skills</h2>
+				</header>
+
+				<!-- modal body start -->
+				<div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+					<lightning-dual-listbox name="Skill Sets" label="Select from options" source-label="Available"
+						selected-label="Selected" value={prevSelectedValues}
+						field-level-help="Select your preferred skills" options={options} onchange={handleSkillChange}>
+					</lightning-dual-listbox>
+				</div>
+
+				<!-- modal footer start-->
+				<footer class="slds-modal__footer">
+					<button class="slds-button slds-button_neutral" onclick={cancelSelection}>Close</button>
+					<button class="slds-button slds-button_brand" onclick={saveSelection}>Save</button>
+				</footer>
+
+			</div>
+		</section>
+		<div class="slds-backdrop slds-backdrop_open"></div>
+
+
+
+
+
+
+
+		<!--  -->
+		<!-- <lightning-dual-listbox name="Skill Sets" label="Select from options" source-label="Available"
+			selected-label="Selected" value={prevSelectedValues} field-level-help="Select your preferred skills"
+			options={options} onchange={handleSkillChange}></lightning-dual-listbox>
+		<br>
+		<lightning-button variant="brand" label="Save" title="Save" onclick={saveSelection}></lightning-button>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<lightning-button variant="brand" label="Cancel" title="Cancel" onclick={cancelSelection}></lightning-button>
+		<br>
+		<br> -->
+		<!--  -->
+
+
+
+	</template>
+
+
+</template>

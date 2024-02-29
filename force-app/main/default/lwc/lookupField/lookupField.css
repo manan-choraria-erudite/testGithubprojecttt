@@ -1,0 +1,8 @@
+.dummy{
+	color : black;
+}
+
+td > input[type='search']
+{
+    width: 100%; /*this will set the width of the textbox equal to its container td*/
+}

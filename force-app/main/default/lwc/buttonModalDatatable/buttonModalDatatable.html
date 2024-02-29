@@ -1,0 +1,87 @@
+<template>
+<lightning-card>
+
+<lightning-button icon-name="utility:add" variant="brand" label="Add Skill Set" onclick={openAddModal}></lightning-button>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<lightning-button icon-name="utility:edit" variant="brand" label="Edit Skill Set" onclick={openEditModal}></lightning-button>
+
+</lightning-card>
+
+
+<!-- datatable modal -->
+
+
+<template lwc:if={showModal}>
+      <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+       <div class="slds-modal__container">
+        <!-- modal header start -->
+          <header class="slds-modal__header">
+             <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={hideModalBox}>
+                <lightning-icon icon-name="utility:close"
+                   alternative-text="close"
+                   variant="inverse"
+                   size="small" ></lightning-icon>
+                <span class="slds-assistive-text">Close</span>
+             </button>
+             <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Skill Sets</h2>
+          </header>
+      
+          <!-- modal body start -->
+          <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                <c-skills-custom-datatable action={action} ></c-skills-custom-datatable>
+          </div>
+
+          <!-- modal footer start-->
+          <footer class="slds-modal__footer">
+             <button class="slds-button slds-button_neutral" onclick={hideModalBox}>Close</button>
+             <button class="slds-button slds-button_brand" onclick={handleSave}>Save</button>
+          </footer>
+       
+       </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+</template>
+
+<!-- datatable modal for add-->
+
+
+
+
+<!-- datatable modal for Edit-->
+
+<!-- <template lwc:if={showEditModal}>
+      <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-02" aria-modal="true" aria-describedby="modal-content-id-2" class="slds-modal slds-fade-in-open">
+       <div class="slds-modal__container">
+          <header class="slds-modal__header">
+             <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={hideEditModalBox}>
+                <lightning-icon icon-name="utility:close"
+                   alternative-text="close"
+                   variant="inverse"
+                   size="small" ></lightning-icon>
+                <span class="slds-assistive-text">Close</span>
+             </button>
+             <h2 id="modal-heading-02" class="slds-text-heading_medium slds-hyphenate">Skill Sets</h2>
+          </header>
+      
+          <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-2">
+                <c-skills-custom-datatable action={actionPassed}></c-skills-custom-datatable>
+          </div>
+
+          <footer class="slds-modal__footer">
+             <button class="slds-button slds-button_neutral" onclick={hideEditModalBox}>Close</button>
+             <button class="slds-button slds-button_neutral" onclick={handleSave}>Save</button>
+          </footer>
+       
+       </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+</template> -->
+
+<!-- datatable modal for Edit -->
+
+
+
+
+</template>

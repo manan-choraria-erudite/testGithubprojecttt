@@ -1,0 +1,66 @@
+.lookup-section{
+    margin-top: -0.6rem;
+    margin-left: -0.5rem;
+    position: absolute!important;
+    z-index: 9999999999999999999999;
+}
+ 
+.lookup-section .slds-dropdown{
+    position: fixed !important;
+    max-height: 120px;
+    max-width: fit-content;
+    overflow: auto;
+}
+
+
+.slds-hide {
+    display: none;
+}
+
+.help-icon-container {
+    display: inline-flex;
+    align-items: center;
+
+}
+
+.help-content {
+    z-index: 10000000 !important; 
+    margin-top: -5px;
+    margin-left: 280px;
+    position: absolute;
+    border: 1px solid #0B1A54;
+    border-radius: 5px;
+    color: white;
+    font-size: 10px;
+    background-color: #0B1A54;
+    padding: 3px 7px 3px 7px;
+    box-shadow: 11px 11px 26px -12px rgba(0,0,0,0.77);
+
+}
+.help-icon-container:hover .help-content {  
+    z-index: 10000 !important;
+    display: block; 
+}
+
+
+.arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px; 
+    border-color:  transparent #0B1A54 transparent transparent; 
+    bottom: 0px; 
+    transform: translateX(-50%); 
+    left: -4px; 
+    top: 37%;
+
+}
+
+
+/* table {
+    border: none; 
+}  */
+td {
+    padding: 1px; 
+}

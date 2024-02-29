@@ -1,0 +1,62 @@
+.dummy{
+	color : black;
+}
+
+/* 
+button {
+	
+				width: 170px;
+                display: inline-block;
+                outline: 0;
+                border: 0;
+                cursor: pointer;
+                font-weight: 600;
+                color: rgb(72, 76, 122);
+                font-size: 14px;
+                height: 40px;
+                padding: 8px 24px;
+                border-radius: 50px;
+                background-image: linear-gradient(180deg,#fff,#f5f5fa);
+                box-shadow: 0 4px 11px 0 rgb(37 44 97 / 15%), 0 1px 3px 0 rgb(93 100 148 / 20%);
+
+  border-color: transparent;
+}
+
+button:hover 
+{
+	  transform: scale(1.04);
+
+  background: #7ec5ff8a;
+  border-color: #2196F3;
+                  box-shadow: 0 4px 11px 0 rgb(37 44 97 / 15%), 0 1px 3px 0 rgb(93 100 148 / 20%);
+			 
+  } */
+
+
+  /* main compo  css */
+  .btn {
+	
+  width: 174px;
+          display: inline-block;
+          outline: 0;
+          border: 0;
+          cursor: pointer;
+          font-weight: 600;
+          color: rgb(72, 76, 122);
+          font-size: 14px;
+          height: 40px;
+          padding: 8px 24px;
+          border-radius: 50px;
+          background-image: linear-gradient(180deg,#fff,#f5f5fa);
+          box-shadow: inset 0px -1px 2px 3px rgb(37 44 97 / 15%), 0px 2px 0px 1px rgb(93 100 148 / 20%);
+          border-color: transparent;
+}
+
+.btn:hover {
+  transform: scale(1.04);
+  box-shadow: inset 0px -1px 2px 3px rgb(37 44 97 / 15%), 0px 2px 0px 1px rgb(93 100 148 / 20%);
+
+  background-color: rgb(72, 76, 122);
+  color: black;
+}
+  /*  main compo css */

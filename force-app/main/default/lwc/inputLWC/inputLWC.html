@@ -1,0 +1,92 @@
+<template>
+
+
+	<lightning-card style="padding-left: 90px; padding-right: 90px;">
+		<h1 style="text-align:center; font-size:21px; color:navy;"><b>Please Select Stage and Status</b></h1>
+
+		<div class="center">
+			<lightning-combobox label="Stage" value={selectedStage} options={picklistOptions1} onchange={StageChange}
+				style="width:70%;"></lightning-combobox>
+
+
+		</div>
+		<!-- <div class="center">
+			<p>Selected Stage is: {selectedStage}</p>
+		</div> -->
+		<br>
+		<div class="center">
+			<!-- New -->
+			<template if:true={New}>
+				<lightning-combobox label="Stage" value={selectedStatus} options={picklistOptions2}
+					onchange={StatusChange} style="width:70%;"></lightning-combobox>
+
+				<!-- <div class="center2">
+					<p>Selected Status is: {selectedStatus}</p>
+
+				</div> -->
+
+
+
+			</template>
+
+			<!-- Submitted -->
+			<template if:true={Submitted}>
+				<lightning-combobox label="Stage" value={selectedStatus} options={picklistOptions3}
+					onchange={StatusChange} style="width:70%;"></lightning-combobox>
+
+				<br>
+				<br>
+				<!-- <br>
+				<div class="center2">
+					<p>Selected Status is: {selectedStatus}</p>
+
+				</div> -->
+			</template>
+
+
+			<!-- Paid -->
+			<template if:true={Paid}>
+				<lightning-combobox label="Stage" value={selectedStatus} options={picklistOptions4}
+					onchange={StatusChange} style="width:70%;"></lightning-combobox>
+				<br>
+				<!-- <div class="center2">
+					<p>Selected Status is: {selectedStatus}</p>
+
+				</div> -->
+			</template>
+
+
+
+			<!-- Rejected -->
+			<template if:true={Rejected}>
+				<lightning-input type="text" label="Enter some text" style="width:70%;" value={rejectedValue}
+					onchange={handleRejected}></lightning-input>
+				<br>
+				<!-- <div class="center2">
+
+					<p>Entered Input is : {rejectedValue}</p>
+				</div> -->
+			</template>
+
+
+
+		</div>
+
+
+		<!-- <div class="center">
+			<p>Selected Status is: {selectedStatus}</p>
+            <p>Entered Input is : {rejectedValue}</p>
+		</div> -->
+
+		<br>
+		<template if:true={show}>
+			<div class="center3">
+				<lightning-button variant="success" label="Proceed" title="Proceed" onclick={handleClick}
+					class="slds-m-left_x-small"></lightning-button>
+				<lightning-button variant="destructive-text" class="slds-m-left_x-small" label="Cancel" onclick={closeAction}></lightning-button>
+				
+			</div>
+		</template>
+	</lightning-card>
+
+</template>

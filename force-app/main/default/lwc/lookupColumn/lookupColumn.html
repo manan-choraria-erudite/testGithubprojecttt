@@ -1,0 +1,106 @@
+<template>
+
+	<div style="display:flex;">
+
+		<!-- <div class="help-icon-container">
+			<lightning-icon icon-name="utility:info" size="xx-small" 
+				onmouseover={showHelpText} onmouseout={hideHelpText}></lightning-icon>
+		</div>
+		<template lwc:if={showHelp}>
+			<div class="help-content">This is the help content.</div>
+		</template>
+		<template lwc:else>
+			<div class="slds-hide"></div>
+		</template>
+&nbsp; &nbsp; -->
+
+
+
+
+
+		<lightning-input type="text" name="name" variant="label-hidden" placeholder="type here..." style="width:100%;">
+		</lightning-input>
+		&nbsp; &nbsp;
+		 
+		 
+		 <!-- <lightning-helptext style="padding-left: 4px; padding-right: 4px;" content="If checked, this template contains merged fields."></lightning-helptext> -->
+
+
+
+		<lightning-layout-item>
+			<lightning-button-group>
+				<lightning-button-icon-stateful icon-name="utility:adjust_value" selected={newRateIconStatefulState}
+					alternative-text="New Rate" onclick={handleNewRateIconStatefulClick} size="medium">
+				</lightning-button-icon-stateful>
+				<lightning-button-icon-stateful icon-name="utility:discounts" selected={discountIconStatefulState}
+					alternative-text="Discount" onclick={handleDiscountIconStatefulClick} size="medium">
+				</lightning-button-icon-stateful>
+			</lightning-button-group>
+		</lightning-layout-item>
+
+
+
+ <!-- <div style="display: flex; padding-top: 12px;">
+                                        <span style="padding-top: 2px;">Merged Fields</span>
+                                        <lightning-helptext style="padding-left: 4px; padding-right: 4px;" content="If checked, this template contains merged fields."></lightning-helptext>
+                                        <lightning-input class="slds-m-bottom_small" type="toggle"
+                                            name="hasMergedFields" checked={hasMergedFields} label="Merged Fields"
+                                            message-toggle-active="True" message-toggle-inactive="False"
+                                            field-level-help="If checked means this template contains merged fields."
+                                            variant="label-hidden"
+                                            onchange={handleToggle}>
+                                        </lightning-input>
+                                    </div> -->
+&nbsp; &nbsp;
+
+
+	<div class="help-icon-container">
+		<lightning-icon icon-name="utility:info" size="xx-small" 
+			onmouseover={showHelpText} onmouseout={hideHelpText} style="cursor:pointer;"></lightning-icon>
+	</div>
+	<template lwc:if={showHelp}>
+		<div class="help-content">
+
+					<table>
+						<!-- <tr style="border:none;">
+							<td style="border:none;">Disc %</td>
+							<td style="border:none;">-</td>
+							<td style="border:none;">20%</td>
+						</tr>
+						<tr style="border:none;">
+							<td style="border:none;">Disc %</td>
+							<td style="border:none;">-</td>
+							<td style="border:none;">20%</td>
+						</tr>
+						 -->
+
+						<tr style="border:none;">
+							<th style="border:none;">Disc %</th>
+							<th style="border:none; margin:0px 2px 0px 2px;"></th>
+							<th style="border:none;">Disc Tier</th>
+							<th style="border:none; margin:0px 2px 0px 2px;"></th>
+							<th style="border:none;">Disc Approval Level</th>
+						</tr>
+						<tr style="border:none;">
+							<td style="border:none;">20%</td>
+							<td style="border:none;"></td>
+							<td style="border:none;">Tier 2</td>
+							<td style="border:none;"></td>
+							<td style="border:none;">Director of Sales</td>
+						</tr>
+
+
+
+						</table>
+				
+				 <div class="arrow" ></div>
+			</div>
+		</template>
+		<template lwc:else>
+			<div class="slds-hide"></div>
+		</template>
+
+
+
+	</div>
+</template>
